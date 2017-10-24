@@ -4,7 +4,30 @@
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+
+			<style>
+			div#expand{
+			display:none;
+			}
+			</style>
+			<script>
+			function show()
+			{
+			//Function content goes here
+			if(document.getElementById('expand').style.display == 'block')
+				document.getElementById('expand').style.display = 'none';
+			else
+				document.getElementById('expand').style.display = 'block';
+
+			}
+			</script>
+
+
 		</head>
+
+
+
 		<body>
 			<nav>
 	    		<ul>
@@ -14,11 +37,13 @@
 							<li><a href="/teaching/teaching">Teaching</a></li>
 	    		</ul>
 			</nav>
+
 			<div class="container">
 
 			{{ content }}
 
 			</div><!-- /.container -->
+
 			<footer>
 	    		<ul>
 	        		<li><a href="https://www.linkedin.com/in/david-chen-21170064/">LinkedIn</a></li>
@@ -27,5 +52,6 @@
 
 				</ul>
 			</footer>
+
 		</body>
 	</html>
